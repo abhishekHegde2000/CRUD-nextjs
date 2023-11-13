@@ -3,29 +3,17 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <>
-        <header>
-                <nav className="w-full md:[70%] py-3 px-2 shadow-md">
+    <nav className="flex items-center  m-2 p-2 justify-between">
+        <Link href={'/'} className="font-bold text-3xl text-white">
+            Crud App
+        </Link>
+        <ul className='flex space-x-2'>
+            <li><Link href={'/'} className="font-bold text-2xl text-white">Home</Link></li>
+            <li><Link href={'/about'} className="font-bold text-2xl text-white">About</Link></li>
+            <li><Link href={'/contact'} className="font-bold text-2xl text-white">Contact</Link></li>
+        </ul>
+    </nav>
 
-                    <Link href={'/'}
-                    className="font-bold text-2xl">
-                        CRUD APP
-                    </Link>
-                    {/* {creat Home , Contact , About} */}
-                    <ul className="flex justify-end space-x-4">
-                        <li>
-                            <Link href={'/'}>Home</Link>
-                        </li>
-                        <li>
-                            <Link href={'/about'}>About</Link>
-                        </li>
-                        <li>
-                            <Link href={'/contact'}>Contact</Link>
-                        </li>   
-                    </ul>
-                </nav>
-            </header>
-    </>
   )
 }
 

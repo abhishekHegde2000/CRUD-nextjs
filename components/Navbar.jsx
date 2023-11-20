@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { ModeToggle } from "./Dark"
 
 const Navbar = () => {
   return (
@@ -10,7 +11,8 @@ const Navbar = () => {
                 <Link href={'/'} className="font-bold text-2xl">
                     Crud - App
                 </Link>
-                <ul className="flex space-x-2 font-semibold">
+                <div className="flex gap-2">
+                <ul className="flex space-x-2 font-semibold text-center items-center">
                     <li>
                         <Link href={'/'} className=" ">
                             Home
@@ -27,6 +29,8 @@ const Navbar = () => {
                         </Link>
                     </li>
                 </ul>
+                <ModeToggle/>
+                </div>
             </nav>
 
         </header>

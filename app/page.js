@@ -38,6 +38,7 @@ export default function Home() {
 
         try {
             // api code
+            const response = await axios.post('/api/route', todos);
 
             toast({
                 title: "Todo Added",

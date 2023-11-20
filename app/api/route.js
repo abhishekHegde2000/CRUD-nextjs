@@ -7,10 +7,14 @@ const LoadDB = async () => {
 };
 
 LoadDB();
-export async function GET(req, res) {
-    return NextResponse.json({ message: "Hello World" });
-}
+// export async function GET(req, res) {
+//     return NextResponse.json({ message: "Hello World" });
+// }
 
 export async function POST(req, res) {
-    return NextResponse.json({ message: "Todo Added" });
+
+    const { title, description } = req.json();
+
+    await TodoModel.create({ title, description });
+    return NextResponse.json({ message: "Todo Created" });
 }

@@ -1,10 +1,14 @@
-import Image from 'next/image'
+"use client";
+
+
+import { useState } from "react";
 
 export default function Home() {
 
+
   return(
-    <div>
-      <h1>Next.js</h1>
-    </div>
+    <>
+
+    </>
   )
 }
